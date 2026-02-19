@@ -9,6 +9,8 @@
  * - Retrieves the correct S3 URL via WP Offload Media.
  * - Replaces incorrect URLs and updates the post.
  *
+ * run in terminal with: "$: wp eval-file repair-single-page.php --url=2026.pdxwlf.com"
+ *
  * @package CustomMediaRepair
  */
 
