@@ -1,10 +1,12 @@
+![cover image for subdomain migration media fix repo](./archive-migration-media-fix.webp)
+
 # WordPress Subdomain Migration AWS Media Repair Scripts
 
 This toolkit was designed to fix broken media paths during WordPress subdomain migrations for the Portland Winter Light festival, specifically when using [WP Offload Media](<https://wordpress.org/plugins/amazon-s3-and-cloudfront/>) with [Object Versioning](https://deliciousbrains.com/wp-offload-media/doc/object-versioning-instead-of-cache-invalidation/) enabled. Feel free to adapt for your own purposes.
 
 ## **Overview**
 
-When migrating a site to a subdomain (e.g., pdxwlf.com → 2026.pdxwlf.com), standard search-and-replace tools often break the connection to AWS S3. This happens because the database loses the "handshake" with S3 metadata, and standard WordPress functions fail to map new URLs to old Media IDs.
+When migrating a site to a subdomain (e.g., pdxwlf.com → 2026.pdxwlf.com), standard search-and-replace tools often break the connection to AWS S3. This happens because the database loses the "handshake" with S3 metadata, and standard WordPress functions fail to map new URLs to old Media IDs. A full explanation can be found on my blog at [https://studiok40.com/ghost-of-festivals-past-how-a-subdomain-migration-broke-my-media-library-and-how-i-fixed-it/](https://studiok40.com/ghost-of-festivals-past-how-a-subdomain-migration-broke-my-media-library-and-how-i-fixed-it/)
 
 These scripts bypass URL logic and use **Filename-to-ID mapping** to restore the correct S3 paths.
 
